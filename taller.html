@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+           background-color: burlywood;
+        }
+
+        p{
+            color: blue;
+        }
+
+        h2{
+            font-size: 25px;
+        }
+
+        .destacado{
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        #miElemento{
+            border: 1px solid red;
+            font-style: italic;
+        }
+
+        a[href="#"]{
+           color: green;
+        }
+
+        input[type="text"]{
+            border: 2px solid black;
+        }
+
+       
+        ul li{
+            color: purple;
+        }
+
+        article > ul > li {
+            color: blue;
+        }
+
+        h1 + p{
+            color: crimson;
+        }
+
+        button ~ p {
+            color: forestgreen;
+        }
+
+        /*pseudoelementos */
+        a:hover{
+            color: cornsilk;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Title</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Natus sint eveniet minus quae tenetur dolores mollitia sunt doloremque amet, 
+        officia et nobis quis illo nisi dignissimos culpa nesciunt eos adipisci.
+    </p>
+    
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nesciunt quia, 
+        hic nisi quae tempore perspiciatis mollitia. 
+        Veniam temporibus eveniet magni! Quas repellendus tenetur dolorum distinctio saepe facere quod recusandae?
+    </p>
+
+    
+
+    <h2>Subtitle</h2>
+      <div class="destacado">Article 1</div>
+      <div class="destacado">Article 2</div>
+      <div class="destacado">Article 3</div>
+      <div class="destacado">Article 4</div>
+
+    <h2>Product</h2>
+    <div id="miElemento">Content of the product</div>
+    <div class="container">
+    <ul>
+        <li>healthy</li>
+        <li>cheap</li>
+        <li>500 ml</li>
+    </ul>
+
+    <article>
+        <span style="cursor: pointer"></span>
+        <h3>most wanted items</h3> 
+        <a href="#">Product 1</a>
+        <a href="#">Product 2</a>
+        <a href="#">Product 3</a>
+   
+        <ul>
+           <h4>recommended items for you </h4>
+           <li>article 5</li>
+           <li>article 6</li>
+           <li>article 7</li>
+        </ul>
+       </article>
+       
+    </div>
+
+    ¿which item you are looking for?
+    <h3>¡Search here!</h3>
+    <input type="text">
+    <button>search</button>
+    <p>our products are 100 percent recommended </p>
+</body>
+</html>

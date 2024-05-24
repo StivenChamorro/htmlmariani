@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*estilo para descendientes*/
+        div p{
+            color: cornflowerblue;
+        }
+
+        /*estilo para los hijos directos*/
+        article > ul > li {
+            color: blueviolet;
+        }
+
+        /*Estilo para los adyacentes*/
+        a + a{
+            color: crimson;
+        }
+
+        div ~ div {
+            color: purple;
+        }
+
+    </style>
+</head>
+<body>
+    Descendientes
+    <div>
+        <p>parrafo</p>
+        <p>para</p>
+        <p>continuar</p>
+    </div>
+
+    Hijo directo
+    <article>
+        <h2>Articulo 1</h2>
+        <p>contenido del articulo</p>
+        <ul>
+            <li>Etiqueta 1</li>
+            <li>Etiqueta 2</li>
+            <li>Etiqueta 3</li>
+        </ul>
+    </article>
+
+    Elementos Adyacentes
+    <a href="#">Enlace 1</a>
+    <a href="#">Enlace 2</a>
+    <a href="#">Enlace 3</a>
+
+    <h1>Combinadores hermanos</h1>
+    <div>Elemento 1</div>
+    <div>Elemento 2</div>
+    <div>Elemento 3</div>
+
+</body>
+</html>
