@@ -4,55 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar Flecha con Pseudoelemento</title>
-    <style>
-         /* Estilos para el menú de navegación */
-         nav {
-            background-color: #333;
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px 15px;
-            display: block;
-            transition: background-color 0.3s;
-        }
-
-        nav ul li a:hover {
-            background-color: #555;
-        }
-
-        /* Estilo para el elemento activo */
-        nav ul li a.active {
-            background-color: #4CAF50;
-            color: #fff;
-        }
-
-    </style>
+    
 </head>
 <body>
-    <nav>
+    <nav id="menu">
         <ul>
-            <li><a href="#" class="active">Inicio</a></li>
-            <li><a href="#">Sobre Nosotros</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#section1">Section 1</a></li>
+            <li><a href="#section2">Section 2</a></li>
+            <li><a href="#section3">Section 3</a></li>
+            <li><a href="#section4">Section 4</a></li>
         </ul>
     </nav>
+
+    <script>
+        // Script para el indicador de progreso en el menú de navegación
+        document.addEventListener("scroll", function() {
+            const nav = document.querySelector("nav");
+            const sections = document.querySelectorAll("section");
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            const menuLinks = document.querySelectorAll("nav ul li a");
+            menuLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href").slice(1) === current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
 
